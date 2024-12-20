@@ -1,5 +1,77 @@
+:root {
+  --beige-color: hsl(34, 25%, 70%);
+}
+
+@font-face {
+  font-family: "Pragmatica";
+  src: url("../assets/fonts/pragmatica-woff2/PragmaticaExtended-Bold.woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: url("../assets/fonts/circe-ttf/Circe-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--beige-color);
+  font-family: "Circe";
+}
+
+nav {
+  position: sticky;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 0.5rem;
+}
+
+nav > * {
+  background-color: hsl(10, 54%, 34%);
+  color: var(--beige-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Pragmatica";
+  font-size: 3rem;
+}
+
+h1 span {
+  cursor: cell;
+  margin-inline: 1rem;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav * *:not(h1) {
+  transition: .1s color;
+}
+
+nav * *:not(h1):hover {
+  color: black;
 }
