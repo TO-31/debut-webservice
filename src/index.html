@@ -31,81 +31,121 @@
     />
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="styles/style.css" />
-    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="blocks/global.css" />
+    <link rel="stylesheet" href="blocks/nav/nav.css" />
+    <link rel="stylesheet" href="blocks/link/link.css" />
+    <link rel="stylesheet" href="blocks/list/list.css" />
+    <link rel="stylesheet" href="blocks/header/header.css" />
+    <link rel="stylesheet" href="blocks/main/main.css" />
+    <link rel="stylesheet" href="blocks/news/news.css" />
+    <link rel="stylesheet" href="blocks/text/text.css" />
+    <link rel="stylesheet" href="blocks/famous/famous.css" />
+    <link rel="stylesheet" href="blocks/footer/footer.css" />
+    <script src="blocks/script.js" defer></script>
   </head>
   <body>
-    <div id="nav__container">
-      <nav>
+    <div class="nav">
+      <nav class="nav__container">
         <div>
-          <h1>Дебют</h1>
+          <header>
+            <h1 class="header__h1">Дебют</h1>
+          </header>
         </div>
-        <div id="nav__news-panel">
-          <ul>
-            <li><a href="">Новичкам</a></li>
-            <li><a href="">Популярное</a></li>
-            <li><a href="">Купить</a></li>
-            <li><a href="">О нас</a></li>
-            <li><a href="">Подписка</a></li>
+        <div class="nav__news">
+          <ul class="nav__links-container list">
+            <li class="nav__link-envelop">
+              <a class="nav__link link" href="">Новичкам</a>
+            </li>
+            <li class="nav__link-envelop">
+              <a class="nav__link link" href="">Популярное</a>
+            </li>
+            <li class="nav__link-envelop">
+              <a class="nav__link link" href="">Купить</a>
+            </li>
+            <li class="nav__link-envelop">
+              <a class="nav__link link" href="">О нас</a>
+            </li>
+            <li class="nav__link-envelop">
+              <a class="nav__link link" href="">Подписка</a>
+            </li>
           </ul>
         </div>
-        <div id="nav__reg-panel">
-          <a href="">Войти</a>
+        <div class="nav__register">
+          <a class="nav__register-link link" href="">Войти</a>
         </div>
-        <div id="nav__burger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="nav__burger-menu">
+          <span class="nav__burger-menu-span"></span>
+          <span class="nav__burger-menu-span"></span>
+          <span class="nav__burger-menu-span"></span>
         </div>
       </nav>
     </div>
-    <main>
-      <div>
-        <section id="news__container" class="big-section">
-          <h2>Новость дня</h2>
-            <div id="news__block">
-              <article id="news__block-text">
-                <h3><a href="" class="link__underline">Молодой художник-дебютант представил свою первую работу</a></h3>
-                <p id="desc-news-picture">
-                  На картине изображены пожилой пахарь и его дочь, которые вместе
-                  трудятся на поле в лучах мягкого вечернего солнца. Детализированная
-                  фактура и насыщенные оттенки создают эффект живого присутствия, а
-                  выражения их лиц передают глубину семейных связей и упорство,
-                  присущее сельскому труду. Работа уже привлекла внимание зрителей
-                  своим реализмом и трогательной атмосферой.
-                </p>
-              </article>
-              <a href="" id="news__img">
-                <picture>
-                  <source media="(max-width: 450px)" srcset="assets/images/news-450x150.jpg" type="image/jpeg">
-                  <source media="(max-width: 768px)" srcset="assets/images/news-768x256.jpg" type="image/jpeg">
-                  <img 
-                    src="assets/images/picture-image-news.jpg" 
-                    alt="Картина в зеленых теплых тонах"
-                    aria-describedby="desc-news-picture"
-                  />
-                </picture>
-              </a>
-            </div>
+    <main class="main">
+      <div class="main__container">
+        <section class="main__section" id="day-news">
+          <h2 class="header__h2">Новость дня</h2>
+          <div class="news__container">
+            <article>
+              <h3 class="header__h3 news__header">
+                <a href="" class="link link_underline"
+                  >Молодой художник-дебютант представил свою первую работу</a
+                >
+              </h3>
+              <p class="text news__text" id="desc-news-picture">
+                На картине изображены пожилой пахарь и его дочь, которые вместе
+                трудятся на поле в лучах мягкого вечернего солнца.
+                Детализированная фактура и насыщенные оттенки создают эффект
+                живого присутствия, а выражения их лиц передают глубину семейных
+                связей и упорство, присущее сельскому труду. Работа уже
+                привлекла внимание зрителей своим реализмом и трогательной
+                атмосферой.
+              </p>
+            </article>
+            <a href="" class="news__container-img">
+              <picture>
+                <source
+                  media="(max-width: 450px)"
+                  srcset="assets/images/news-450x150.jpg"
+                  type="image/jpeg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="assets/images/news-768x256.jpg"
+                  type="image/jpeg"
+                />
+                <img
+                  class="news__img"
+                  src="assets/images/picture-image-news.jpg"
+                  alt="Картина в зеленых теплых тонах"
+                  aria-describedby="desc-news-picture"
+                />
+              </picture>
+            </a>
+          </div>
         </section>
-        <section class="big-section">
-          <h2>Популярные работы</h2>
-          <div id="fam__container">
-            <div>
-              <figure>
-                <a href="">
+        <section class="main__section" id="famous-work">
+          <h2 class="header__h2">Популярные работы</h2>
+          <div class="famous__container">
+            <div class="famous__container-img-1">
+              <figure class="famous__container-img-2">
+                <a href="" class="famous__link">
                   <picture>
-                    <source media="(max-width: 450px)" srcset="assets/images/fam-1-450x444.jpg" type="image/jpeg">
-                    <img 
-                      src="assets/images/fam-1-big.jpg" 
+                    <source
+                      media="(max-width: 450px)"
+                      srcset="assets/images/fam-1-450x444.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="assets/images/fam-1-big.jpg"
                       alt="Темноволосая девушка с ярко-желтым лицом, красными губами и синими бровями с двумя красными точками на лбу. 
-                        Работа выполнена в ярких броских цветах, без переходов между ними." 
-                      type="image/jpeg" 
-                      class="img-hover-size">
+                        Работа выполнена в ярких броских цветах, без переходов между ними."
+                      type="image/jpeg"
+                      class="famous__img famous__img_hover"
+                    />
                   </picture>
                 </a>
                 <figcaption>
-                  <ul>
+                  <ul class="list famous__description">
                     <li><cite>Синий, желтый и черный</cite></li>
                     <li><cite>Алена Ахметова</cite></li>
                     <li>1000000 руб</li>
@@ -113,22 +153,27 @@
                 </figcaption>
               </figure>
             </div>
-            <div>
-              <figure>
-                <a href="">
+            <div class="famous__container-img-1">
+              <figure class="famous__container-img-2">
+                <a href="" class="famous__link">
                   <picture>
-                    <source media="(max-width: 450px)" srcset="assets/images/fam-2-350x516.jpg" type="image/jpeg">
-                    <img 
-                      src="assets/images/fam-2-big.jpg" 
+                    <source
+                      media="(max-width: 450px)"
+                      srcset="assets/images/fam-2-350x516.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="assets/images/fam-2-big.jpg"
                       alt="Девушка с ярким макияжем и красными точками на лбу смотрит на вас. 
                         В её ярко-красных губах сигара.
-                        Одета в зеленую прозрачную блузку и красные штаны-клёш." 
-                      type="image/jpeg" 
-                      class="img-hover-size">
+                        Одета в зеленую прозрачную блузку и красные штаны-клёш."
+                      type="image/jpeg"
+                      class="famous__img famous__img_hover"
+                    />
                   </picture>
                 </a>
                 <figcaption>
-                  <ul>
+                  <ul class="list famous__description">
                     <li><cite>В углу</cite></li>
                     <li><cite>Алена Ахметова</cite></li>
                     <li>300000 руб</li>
@@ -136,20 +181,25 @@
                 </figcaption>
               </figure>
             </div>
-            <div>
-              <figure>
-                <a href="">
+            <div class="famous__container-img-1">
+              <figure class="famous__container-img-2">
+                <a href="" class="famous__link">
                   <picture>
-                    <source media="(max-width: 450px)" srcset="assets/images/fam-3-450.jpg" type="image/jpeg">
-                    <img 
-                      src="assets/images/fam-3-big.jpg" 
-                      alt="Работа выполненная в Китайском традиционном стиле - черные мазки гор и деревьев на выцветшем желто-коричневом фоне." 
-                      type="image/jpeg" 
-                      class="img-hover-size">
+                    <source
+                      media="(max-width: 450px)"
+                      srcset="assets/images/fam-3-450.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="assets/images/fam-3-big.jpg"
+                      alt="Работа выполненная в Китайском традиционном стиле - черные мазки гор и деревьев на выцветшем желто-коричневом фоне."
+                      type="image/jpeg"
+                      class="famous__img famous__img_hover"
+                    />
                   </picture>
                 </a>
                 <figcaption>
-                  <ul>
+                  <ul class="list famous__description">
                     <li><cite>Равнина</cite></li>
                     <li><cite>Джао Йо</cite></li>
                     <li>60000 руб</li>
@@ -157,20 +207,25 @@
                 </figcaption>
               </figure>
             </div>
-            <div>
-              <figure>
-                <a href="">
+            <div class="famous__container-img-1">
+              <figure class="famous__container-img-2">
+                <a href="" class="famous__link">
                   <picture>
-                    <source media="(max-width: 450px)" srcset="assets/images/fam-4-350.jpg" type="image/jpeg">
-                    <img 
-                      src="assets/images/fam-4-big.jpg" 
-                      alt="Оголенная по пояс дама, облокачивающаяся на черную расписанную золотом ширму. На фоне летний вид из окна на город" 
-                      type="image/jpeg" 
-                      class="img-hover-size">
+                    <source
+                      media="(max-width: 450px)"
+                      srcset="assets/images/fam-4-350.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="assets/images/fam-4-big.jpg"
+                      alt="Оголенная по пояс дама, облокачивающаяся на черную расписанную золотом ширму. На фоне летний вид из окна на город"
+                      type="image/jpeg"
+                      class="famous__img famous__img_hover"
+                    />
                   </picture>
                 </a>
                 <figcaption>
-                  <ul>
+                  <ul class="list famous__description">
                     <li><cite>Простой воздух</cite></li>
                     <li><cite>Ирина Николаева</cite></li>
                     <li>539000 руб</li>
@@ -178,20 +233,25 @@
                 </figcaption>
               </figure>
             </div>
-            <div>
-              <figure>
-                <a href="">
+            <div class="famous__container-img-1">
+              <figure class="famous__container-img-2">
+                <a href="" class="famous__link">
                   <picture>
-                    <source media="(max-width: 450px)" srcset="assets/images/fam-5-450.jpg" type="image/jpeg">
-                    <img 
-                      src="assets/images/fam-5-big.jpg" 
-                      alt="Агрессивная абстракция из белых, красно-кровавых и черных цветов" 
-                      type="image/jpeg" 
-                      class="img-hover-size">
+                    <source
+                      media="(max-width: 450px)"
+                      srcset="assets/images/fam-5-450.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="assets/images/fam-5-big.jpg"
+                      alt="Агрессивная абстракция из белых, красно-кровавых и черных цветов"
+                      type="image/jpeg"
+                      class="famous__img famous__img_hover"
+                    />
                   </picture>
                 </a>
                 <figcaption>
-                  <ul>
+                  <ul class="list famous__description">
                     <li><cite>Проун №3</cite></li>
                     <li><cite>Кирилл Вистов</cite></li>
                     <li>780900 руб</li>
@@ -199,23 +259,28 @@
                 </figcaption>
               </figure>
             </div>
-            <div>
-              <figure>
-                <a href="">
+            <div class="famous__container-img-1">
+              <figure class="famous__container-img-2">
+                <a href="" class="famous__link">
                   <picture>
-                    <source media="(max-width: 450px)" srcset="assets/images/fam-6-350.jpg" type="image/jpeg">
-                    <img 
-                      src="assets/images/fam-6-big.jpg" 
+                    <source
+                      media="(max-width: 450px)"
+                      srcset="assets/images/fam-6-350.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="assets/images/fam-6-big.jpg"
                       alt="Работа выполнена в пурпурно-неоновых цветах. 
                         Мужчина 55-70 лет с бородкой и усами. 
                         Руки его расположены близко к голове. 
-                        То-ли пытается взяться за голову, то-ли, как паук прядет нить" 
-                      type="image/jpeg" 
-                      class="img-hover-size">
+                        То-ли пытается взяться за голову, то-ли, как паук прядет нить"
+                      type="image/jpeg"
+                      class="famous__img famous__img_hover"
+                    />
                   </picture>
                 </a>
                 <figcaption>
-                  <ul>
+                  <ul class="list famous__description">
                     <li><cite>Рассада</cite></li>
                     <li><cite>Джо Грин</cite></li>
                     <li>500000 руб</li>
@@ -225,39 +290,42 @@
             </div>
           </div>
         </section>
-        <footer>
-            <address>
-              <a href="tel:89688909947">8 (968) 890-99-47</a> <br>
-              <a href="mailto:debut@gmail.com">debut@gmail.com</a> <br>
-              3501 Front St,<br>
-              Сан-Диего<br>
-              США
-            </address>
-            <div id="footer__sections">
-              <ul>
-                <li><a href="#news__container">Новость дня</a></li>
-                <li><a href="#fam__container">Популярные работы</a></li>
-              </ul>
-            </div>
-            <div id="footer__social">
-              <ul>
-                <li>
-                  <a href="">
-                    <img src="assets/images/facebook.svg" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="assets/images/telegram.svg" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="assets/images/youtube.svg" alt="">
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <footer class="footer">
+          <address class="footer__address">
+            <a class="link" href="tel:89688909947">8 (968) 890-99-47</a> <br />
+            <a class="link" href="mailto:debut@gmail.com">debut@gmail.com</a>
+            <br />
+            3501 Front St,<br />
+            Сан-Диего<br />
+            США
+          </address>
+          <div class="footer__nav">
+            <ul class="list">
+              <li><a class="link footer__link" href="#day-news">Новость дня</a></li>
+              <li>
+                <a class="link footer__link" href="#famous-work">Популярные работы</a>
+              </li>
+            </ul>
+          </div>
+          <div >
+            <ul class="list footer__social-list">
+              <li class="footer__social-list-element">
+                <a href="">
+                  <img class="footer__social-img" src="assets/images/facebook.svg" alt="" />
+                </a>
+              </li>
+              <li class="footer__social-list-element">
+                <a href="">
+                  <img class="footer__social-img" src="assets/images/telegram.svg" alt="" />
+                </a>
+              </li>
+              <li class="footer__social-list-element">
+                <a href="">
+                  <img class="footer__social-img" src="assets/images/youtube.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </footer>
       </div>
     </main>

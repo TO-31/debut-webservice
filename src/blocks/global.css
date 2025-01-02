@@ -1,0 +1,30 @@
+:root {
+  --cloud-white: #f6f6f6;
+  --cloud-blue: #d8d8e9;
+
+  --transition-background-color-150ms: 150ms background-color;
+}
+
+@font-face {
+  font-family: "Gogh";
+  src: url("../assets/fonts/GoghVariable-Regular.ttf");
+  font-weight: 400 500 600;
+  font-style: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Gogh";
+  font-style: normal;
+  background-color: var(--cloud-white);
+}
